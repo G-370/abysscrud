@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 24, 2020, 11:20:00 PM
+    Author     : Galew
+*/
+.button_container {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    float: left;
+    width: 230px;
+}
+
+.button_property {
+    width: 150px;
+    align-self: center;
+    color: white;
+}
+
+.action_zone {
+    padding-top: 10px;
+    height: max-content;
+    overflow: auto;
+    padding-left: 5px;
+}
+
+.form_field {
+    padding: 30px;
+}
+
+.button_container_act {
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    float: left;
+    width: 60px;
+}
+
+.button_property_act {
+    width: 40px;
+    align-self: center;
+    color: white;
+}

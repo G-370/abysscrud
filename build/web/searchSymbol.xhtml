@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>SEARCH SYMBOL</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
+        
+    </h:head>
+    <h:body>
+        <div class="container">
+        <h:form>
+            
+            
+                <h2> Pesquisar Símbolo </h2>
+                
+                
+            
+                <h:dataTable value="#{symbol_table.table}"
+                             var="symbol"
+                             styleClass="symboltable"
+                             headerClass="symboltable_header"
+                             rowClasses="symboltable_row"
+                             class="responsive-table striped"
+                >
+                    <h:column>
+                        <f:facet name="header">Chave Primária</f:facet>
+                        #{symbol.pk}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Nome</f:facet>
+                        #{symbol.name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Conteúdo</f:facet>
+                        #{symbol.virtus}
+                    </h:column>
+                </h:dataTable>
+
+                <div class ="row col s6 card form_field">
+                    <h5>Digite o nome, mesmo que parcial, do símbolo.</h5><br></br>
+                    Nome do símbolo:
+                    <h:inputText id="it_pk" size="30" value="#{symbol_table.symbolname}" />
+                </div>
+
+                <div class="row card s6 lighten-1 grey action_zone">
+                    <div class="button_container">
+                        <h:commandButton class="waves-effect waves-purple btn button_property blue" action="#{symbol_table.searchbyname_btn()}" value="Pesquisar" />
+                    </div>
+                    <div class="button_container">
+                    <a href="dive/index.xhtml" class="waves-effect waves-purple btn button_property">Voltar</a>
+                    </div>
+                </div>
+                
+        </h:form>
+        </div>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+    </h:body>
+</html>
+
